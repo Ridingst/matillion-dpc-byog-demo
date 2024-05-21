@@ -11,10 +11,19 @@ pipeline:
         componentName: "Start"
     Alter Warehouse:
       type: "alter-warehouse"
+      transitions:
+        success:
+        - "Alter Warehouse 2"
       parameters:
         componentName: "Alter Warehouse"
         warehouse: "[Environment Default]"
         commandType: "Resume"
+    Alter Warehouse 2:
+      type: "alter-warehouse"
+      parameters:
+        componentName: "Alter Warehouse 2"
+        warehouse: "[Environment Default]"
+        commandType: "Suspend"
 design:
   components:
     Start:
@@ -27,3 +36,8 @@ design:
         x: 120
         "y": 0
       tempMetlId: 2
+    Alter Warehouse 2:
+      position:
+        x: 240
+        "y": 0
+      tempMetlId: 3
