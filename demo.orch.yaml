@@ -24,20 +24,4 @@ pipeline:
         componentName: "Alter Warehouse 2"
         warehouse: "[Environment Default]"
         commandType: "Suspend"
-design:
-  components:
-    Start:
-      position:
-        x: 0
-        "y": 0
-      tempMetlId: 1
-    Alter Warehouse:
-      position:
-        x: 120
-        "y": 0
-      tempMetlId: 2
-    Alter Warehouse 2:
-      position:
-        x: 240
-        "y": 0
-      tempMetlId: 3
+
